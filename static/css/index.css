@@ -48,20 +48,57 @@
     justify-content: left;
 }
 .main-footer > a > button {
-    padding: 10px 30px;
+    padding: 20px 40px;
     border-radius: 20px;
     border: 0px;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight:bolder;
     background-color: var(--primary);
 }
 .main-footer > a > button:hover {
     background-color: black;
     color: white;
-    transition: cubic-bezier(0.68, -0.55, 0.265, 1.55) 250ms;
+    transition: cubic-bezier(0.68, -0.55, 0.265, 1.55) 300ms;
+    transform: scale(1.1);
 }
 
 /* ================= Story ================= */
 .story {
     background-color: var(--primary) ;
+    display: flex;
+}
+.left-story {
+    width: 40%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 60%;
+    transition: cubic-bezier(0.68, -0.55, 0.265, 1.55) 250ms;
+}
+.left-story:hover{
+    background-position: 90%;
+    transition: cubic-bezier(0.68, -0.55, 0.265, 1.55) 250ms;
+}
+.right-story {
+    width: 60%;
+    font-family: 'Inter', system-ui, sans-serif;;
+    display: flex;
+    align-items: center;
+}
+.right-story > div > center > h1 {
+    font-size: 4rem;
+    margin:  3vh 0 5vh 0;
+}
+.right-story > div > p {
+    font-size: 2rem;
+    margin: 0 auto 2.5rem auto;
+    width: 80%;
+    text-align: justify;
+}
+.right-story > div > .quote {
+    font-size: 3.5rem;
+    margin: 6rem auto 2.5rem auto;
+    width: 80%;
+    text-align: center;
+    font-family: "Barlow Condensed", sans-serif;
 }

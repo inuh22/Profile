@@ -4,13 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', path='css/index.css') }}">
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Barlow - "Barlow Condensed", sans-serif; -->
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Inter - 'Inter', system-ui, sans-serif; -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <title>John Patrick Juni</title>
 </head>
 <body>
-    <div class="main page" 
+    <div 
+        class="main page" 
         style="background-image: url({{ url_for('static', path='images/me.png') }}); ">
         <div>
             <h1>Hi,<br>
@@ -29,7 +35,31 @@
         </div>
     </div>
     <div class="story page">
-
+        <div 
+            class="left-story" 
+            style="background-image: url({{url_for('static', path='images/me-logseq.png')}});">
+            hi
+        </div>
+        <div class="right-story">
+            <div>
+                <center>
+                    <h1>The Journey</h1>
+                </center>
+                
+                <p>
+                    My IT journey started with a curiosity for how computers work beneath the surface. I've been daily driving Linux for over five years starting with Debian for four years before moving to Arch Linux, where I continue to explore and learn.
+                </p>
+                <p>
+                    That curiosity led me to build my own custom Linux distribution for my capstone project and later work on Linux R&D during my first internship. My second internship introduced me to full-stack software development, giving me experience building modern web applications from frontend to backend.
+                </p>
+                <p>
+                    Today, I'm diving into cloud computing, expanding my skills in infrastructure, automation, and scalable systems. I enjoy learning new technologies and turning ideas into practical solutions.
+                </p>
+                <p class="quote">
+                    <i>"Build with purpose, learn with resilience, ship with confidence."</i>
+                </p>
+            </div>
+        </div>
     </div>
     <!-- <div class="ido page">
 
