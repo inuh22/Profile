@@ -1,0 +1,67 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+:root {
+    --primary: #f9ffd7;
+    /* --primary-dark: #2563eb;
+    --secondary: #64748b;
+    --background: #f8fafc;
+    --text: #1e293b; */
+}
+.page {
+    height: 100vh;
+    width: 100vw;
+}
+.main {
+    background-color: #2f2f2f;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.main > div {
+    margin: auto;
+    width:  80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 2;
+}
+.main > div > h1 {
+    font-size: clamp(2rem, 50vw, 7rem);
+    font-family: "Barlow Condensed", sans-serif;
+    color: #f9ffd7;
+    width: 50%;
+    margin: 0;
+}
+.main > div > p {
+    margin-top: 1vh;
+    color: var(--primary);
+    font-size: clamp(1rem, 5vw, 1.5rem);
+    width: 50%;
+}   
+.main-footer {
+    height: 40%;
+    display: flex;
+    align-items: end;
+    justify-content: left;
+}
+.main-footer > a > button {
+    padding: 10px 30px;
+    border-radius: 20px;
+    border: 0px;
+    font-size: 1.2rem;
+    font-weight:bolder;
+    background-color: var(--primary);
+}
+.main-footer > a > button:hover {
+    background-color: black;
+    color: white;
+    transition: cubic-bezier(0.68, -0.55, 0.265, 1.55) 250ms;
+}
+
+/* ================= Story ================= */
+.story {
+    background-color: var(--primary) ;
+}
