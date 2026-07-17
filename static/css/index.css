@@ -2,12 +2,17 @@
     padding: 0;
     margin: 0;
 }
+body::-webkit-scrollbar {
+    display: none;
+}
 :root {
     --primary: #f9ffd7;
-    /* --primary-dark: #2563eb;
-    --secondary: #64748b;
-    --background: #f8fafc;
-    --text: #1e293b; */
+    /* -primary-dark: #2563eb; */
+    --secondary: #E2232A;
+    --background: #2f2f2f;
+    /* --text: #1e293b;  */
+    --Barlow : "Barlow Condensed", sans-serif;
+    --Inter : 'Inter', system-ui, sans-serif; 
 }
 .page {
     height: 100vh;
@@ -18,6 +23,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    width: 100%;
 }
 .main > div {
     margin: auto;
@@ -29,8 +35,8 @@
     z-index: 2;
 }
 .main > div > h1 {
-    font-size: clamp(2rem, 50vw, 7rem);
-    font-family: "Barlow Condensed", sans-serif;
+    font-size: clamp(2rem, 5rem, 7rem);
+    font-family: var(--Barlow);
     color: #f9ffd7;
     width: 50%;
     margin: 0;
@@ -48,10 +54,10 @@
     justify-content: left;
 }
 .main-footer > a > button {
-    padding: 20px 40px;
+    padding: 10px 20px;
     border-radius: 20px;
     border: 0px;
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight:bolder;
     background-color: var(--primary);
 }
@@ -66,6 +72,7 @@
 .story {
     background-color: var(--primary) ;
     display: flex;
+    width: 100%;
 }
 .left-story {
     width: 40%;
@@ -81,24 +88,106 @@
 }
 .right-story {
     width: 60%;
-    font-family: 'Inter', system-ui, sans-serif;;
+    font-family: var(--Inter);
     display: flex;
     align-items: center;
 }
-.right-story > div > center > h1 {
-    font-size: 4rem;
+.right-story h1 {
+    font-size: 2rem;
     margin:  3vh 0 5vh 0;
 }
-.right-story > div > p {
-    font-size: 2rem;
-    margin: 0 auto 2.5rem auto;
+.right-story p {
+    font-size: 1.5rem;
+    margin: 0 auto 1rem auto;
     width: 80%;
     text-align: justify;
 }
-.right-story > div > .quote {
-    font-size: 3.5rem;
+.right-story .quote {
+    font-size: 2.5rem;
     margin: 6rem auto 2.5rem auto;
     width: 80%;
     text-align: center;
-    font-family: "Barlow Condensed", sans-serif;
+    font-family: var(--Barlow);
+}
+
+/* ================= What can I do? ================= */
+.ido {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--background);
+    color: var(--primary);
+}
+.ido > div {
+    height: 80%;
+}
+.ido > div:first-child {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.ido > div:first-child > div:first-child > h1 {
+    font-size: 4rem;
+    font-family: var(--Inter);
+}
+.ido > div:first-child > div > p {
+    font-size: 1.5rem;
+    font-family: var(--Barlow);
+}
+.ido > div:last-child {
+    width: 50%;
+
+}
+.ido > div:last-child > div {
+    display: flex;
+    align-items: center;
+    margin: 0 0 5vh 0;
+    font-family: var(--Barlow);
+}
+.ido > div:last-child > div > svg {
+    width: 20%;
+    margin-right: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--secondary);
+    fill: var(--primary);
+    stroke: var(--primary);
+}
+.ido div:last-child h3 {
+    font-size: 2rem;
+}
+.ido div:last-child p {
+    font-size: 1.3rem;
+}
+.ido div:last-child a {
+    color: var(--primary);
+}
+.gen_in_touch {
+    color: var(--primary);
+}
+.gen_in_touch:hover {
+    text-shadow: 2px 2px 5px var(--secondary);
+    transition: ease 200ms;
+    font-size: 2.5rem !important; 
+}
+.tech > h1 {
+    font-family:var(--Inter);
+}
+.tech > div {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    justify-content: space-around;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+.tech > div > img {
+    width: calc((100% - 30px) / 6);
+    height: auto;
+    padding: 10px;
+    object-fit: contain;
 }
