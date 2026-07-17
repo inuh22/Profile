@@ -2,13 +2,6 @@
     padding: 0;
     margin: 0;
 }
-::selection {
-    background-color: var(--secondary);
-    color: var(--primary);
-}
-body::-webkit-scrollbar {
-    display: none;
-}
 :root {
     --primary: #f9ffd7;
     --primary-dark: #54301d; /* Skin Tone */
@@ -17,6 +10,13 @@ body::-webkit-scrollbar {
     /* --text: #1e293b;  */
     --Barlow : "Barlow Condensed", sans-serif;
     --Inter : 'Inter', system-ui, sans-serif; 
+}
+::selection {
+    background-color: var(--secondary);
+    color: var(--primary);
+}
+body::-webkit-scrollbar {
+    display: none;
 }
 .page {
     height: 100vh;
@@ -173,7 +173,7 @@ body::-webkit-scrollbar {
 }
 .gen_in_touch:hover {
     text-shadow: 2px 2px 5px var(--secondary);
-    transition: ease 200ms;
+    transition: cubic-bezier(0.68, -0.55, 0.265, 1.55) 200ms;
     font-size: 2.5rem !important; 
 }
 .tech > h1 {
@@ -259,4 +259,97 @@ body::-webkit-scrollbar {
     border: none;
     background-color: var(--secondary);
     cursor: pointer;
+}
+/* Contact */
+.contact {
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: var(--primary);
+    font-family: var(--Inter);
+}
+.contact-container {
+    height: 90%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+}
+.contact-container > div {
+    padding: 5vh 5vh;
+}
+.contact-container > div:first-child {
+    width: 50%;
+}
+.contact-container > div:first-child > h1 {
+    font-size: 6rem;
+    font-family: var(--Barlow);
+}
+.contact-container > div:first-child > p {
+    font-size: 1.5rem;
+    font-family: var(--Inter);
+}
+.contact-container > div:last-child {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact-form {
+    background-color: var(--primary-dark);
+    width: 80%;
+    height: 90%;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+.contact-form form {
+    width: 90%;
+    height: 90%;
+}
+.contact-form form div {
+    margin-bottom: 25px;
+}
+.contact-form form label {
+    font-size: 1.5rem;
+}
+.contact-form form input, textarea {
+    width: 100%;
+    background-color: var(--primary);
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    margin: 10px 0;
+}
+.contact-form form button {
+    background-color: var(--secondary);
+    color: var(--primary);
+    font-size: 1.5rem;
+    padding: 10px 35%;
+    border-radius: 20px;
+    border: none;
+}
+.fyi {
+    font-size: 12px;
+    margin-top: 10px;
+}
+.fyi > a {
+    color: var(--primary);
+}
+footer {
+    height: 10%;
+    background-color: var(--primary-dark);
+}
+footer .socials {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+footer .socials a {
+    text-decoration: none;
+    color: var(--primary);
 }
