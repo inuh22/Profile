@@ -2,12 +2,16 @@
     padding: 0;
     margin: 0;
 }
+::selection {
+    background-color: var(--secondary);
+    color: var(--primary);
+}
 body::-webkit-scrollbar {
     display: none;
 }
 :root {
     --primary: #f9ffd7;
-    /* -primary-dark: #2563eb; */
+    --primary-dark: #54301d; /* Skin Tone */
     --secondary: #E2232A;
     --background: #2f2f2f;
     /* --text: #1e293b;  */
@@ -23,6 +27,7 @@ body::-webkit-scrollbar {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     width: 100%;
 }
 .main > div {
@@ -138,7 +143,6 @@ body::-webkit-scrollbar {
 }
 .ido > div:last-child {
     width: 50%;
-
 }
 .ido > div:last-child > div {
     display: flex;
@@ -190,4 +194,69 @@ body::-webkit-scrollbar {
     height: auto;
     padding: 10px;
     object-fit: contain;
+}
+/* Projects */
+.projects {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.projects > div {
+    height: 80%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.projects > div > div:first-child {
+    height: 30%;
+}
+.projects > div > div:first-child > h1 {
+    font-size: 6rem;
+    font-family: var(--Barlow);
+    color: var(--primary);
+    margin-bottom: 5vh;
+}
+.projects > div > div:first-child > p {
+    color: var(--primary);
+    font-size: 1.5rem;
+    font-family: var(--Inter);
+}
+.proj_card_contianer {
+    width: 100%;
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+    margin-bottom: 5vh;
+    margin-top: 5vh;
+}
+.proj_cards {
+    color: var(--primary);
+    width: 25%;
+}
+.proj_cards img {
+    width: 80%;
+    margin: 0 10%;
+    aspect-ratio: calc(1*1);
+    object-fit: cover;
+}
+.proj_cards  h1 {
+    font-family: var(--Inter);
+} 
+.proj_cards  p {
+    font-family: var(--Barlow);
+    margin: 10px 0;
+}
+.proj_cards button {
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--secondary);
+    cursor: pointer;
 }
