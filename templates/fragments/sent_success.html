@@ -6,13 +6,11 @@
     <title>Document</title>
 </head>
 <body>
-
-    <label for="">Sent Success!!!</label>
-    <br>
-    <br>
-    <br>
-    <center>
-            <button hx-get="#">Back</button>
-    </center>
+    <form hx-get="/mail-form" hx-target="this" hx-swap="outerHTML">
+        <label for="name">Sent Success!!!</label>
+        <center>
+            <button type="submit">Send</button>
+        </center>
+    </form>
 </body>
 </html>

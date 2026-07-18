@@ -1,3 +1,21 @@
+# Virtual environment
 .venv/
+
+# Environment files
+.env
 .env.*
+
+# Python cache
 __pycache__/
+*.py[cod]
+
+# Pytest
+.pytest_cache/
+
+# Coverage
+.coverage
+htmlcov/
+
+# IDEs
+.vscode/
+.idea/
