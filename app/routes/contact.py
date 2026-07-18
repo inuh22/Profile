@@ -16,6 +16,8 @@ async def contact_form(
     print(email)
     print(message)
 
-    return HTMLResponse(
-        "<p>Message Sent!!!</p>"
+    return templates.TemplateResponse(
+        request=request,
+        name='fragments/sent_success.html',
+        context={}
     )
