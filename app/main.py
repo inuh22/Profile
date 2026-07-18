@@ -1,13 +1,12 @@
 from fastapi import FastAPI, Request, Form
-from fastapi.templating import Jinja2Templates
+
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import HTMLResponse
 from typing import Annotated
+from app.routes.home import router as home_router
+from app.routes.contact import router as contact_router
 
 app = FastAPI()
-
-# Templates
-templates = Jinja2Templates(directory='templates')
 
 # Static File
 app.mount(
@@ -16,26 +15,5 @@ app.mount(
     name = "static"    
 )
 
-@app.get("/")
-async def home(request: Request):
-    return templates.TemplateResponse(
-        request=request,
-        name='index.html',
-        context={}
-    )
-
-@app.post("/contact-form")
-async def contact_form(
-    request: Request,
-    name : Annotated[str, Form()] ,
-    email : Annotated[str, Form()],
-    message : Annotated[str, Form()]
-    ):
-    print(name)
-    print(email)
-    print(message)
-    return templates.TemplateResponse(
-        request=request,
-        name='index.html',
-        context={}
-    )
+app.include_router(home_router)
+app.include_router(contact_router)
