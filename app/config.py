@@ -3,9 +3,11 @@ from pydantic import SecretStr
 from dotenv import load_dotenv
 from fastapi_mail import ConnectionConfig
 from fastapi.templating import Jinja2Templates
+from fastapi import APIRouter
+
 
 load_dotenv()
-
+router = APIRouter()
 templates = Jinja2Templates(directory='templates')
 
 mail_config = ConnectionConfig(

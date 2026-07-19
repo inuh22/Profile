@@ -25,10 +25,6 @@ async def contact_form(
         message : Annotated[str, Form()]
     ):
 
-    print(name)
-    print(email)
-    print(message)
-
     if not name or not email or not message:
         return templates.TemplateResponse(
             request=request,

@@ -311,6 +311,11 @@ body::-webkit-scrollbar {
     width: 90%;
     height: 90%;
     padding: 30px;
+    max-height: 80vh !important;
+    overflow-x: hidden;
+}
+.contact-form form::-webkit-scrollbar{
+    display: none;
 }
 .contact-form form > div:first-child {
     display: none;
