@@ -1,7 +1,5 @@
 from fastapi import APIRouter, Request
-from app.config import templates
-
-router = APIRouter()
+from app.config import templates, router
 
 @router.get("/")
 async def home(request: Request):

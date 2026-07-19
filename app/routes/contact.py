@@ -1,13 +1,9 @@
-from fastapi import APIRouter, Request, Form
+from fastapi import Request, Form
 from fastapi.responses import HTMLResponse
-from app.config import templates
+from app.config import templates, router
 from app.services.mailer import contact_mailer
 from typing import Annotated
 from pydantic import EmailStr
-
-
-router = APIRouter()
-
 
 @router.get('/mail-form')
 async def mail_form(request: Request):
