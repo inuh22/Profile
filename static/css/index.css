@@ -302,7 +302,6 @@ body::-webkit-scrollbar {
 .contact-form {
     background-color: var(--primary-dark);
     width: 80%;
-    height: 90%;
     border-radius: 20px;
     display: flex;
     justify-content: center;
@@ -311,6 +310,15 @@ body::-webkit-scrollbar {
 .contact-form form {
     width: 90%;
     height: 90%;
+    padding: 30px;
+    max-height: 80vh !important;
+    overflow-x: hidden;
+}
+.contact-form form::-webkit-scrollbar{
+    display: none;
+}
+.contact-form form > div:first-child {
+    display: none;
 }
 .contact-form form div {
     margin-bottom: 25px;

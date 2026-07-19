@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mail Form</title>
+</head>
+<body>
+    <form hx-post="/send-mail-form" hx-target="this" hx-swap="outerHTML" id="mail_form">
+        <div>
+            <label for="name">Iam</label>
+            <input type="text" name="iam" id="">
+        </div>
+        <div>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="" required>
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="" required>
+        </div>
+        <div>
+            <label for="message">Message</label>
+            <textarea name="message" id="" rows="5" required></textarea>
+        </div>
+        <center>
+            <button type="submit">Send</button>
+            <p class="fyi">
+                Your information is only used to reply to your message. <br>
+                <a
+                    href="/data-privacy"
+                    hx-get="/data-privacy"
+                    hx-target="#mail_form"
+                    hx-swap="outerHTML">
+                    Learn how I handle your data.
+                </a>
+            </p>
+        </center>
+    </form>
+</body>
+</html>

@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="{{ url_for('static', path='css/index.css') }}">
     <link rel="shortcut icon" href="{{ url_for('static', path='images/favicon.png') }}" type="image/x-icon">
     
+    <!-- htmx -->
+    <script src="{{ url_for('static', path='js/htmx.min.js') }}"></script>
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -104,7 +107,7 @@
             </div>
             <div>
                 <div>
-                    <a href="mailto:john.juni.careers@gmail.com">
+                    <a href="#contacts">
                         <h3 class="gen_in_touch">Get in Touch</h3>
                     </a>
                 </div>
@@ -180,7 +183,7 @@
             </div>
         </div>
     </div>
-    <div class="contact page"
+    <div class="contact page" id="contacts"
         style="background-image: url({{url_for('static', path='images/table.png')}});">
         <div class="contact-container">
             <div>
@@ -188,29 +191,13 @@
                 <h1>Every great solution starts with a conversation.</h1>
                 <hr>
                 <br>
-                <p>Tell me what you're building, and let's explore how we can make it happen.</p>
+                <p>Tell me what you're building, and let's explore how we can make it.</p>
             </div>
             <div>
                 <div class="contact-form">
-                    <form action="/contact-form" method="post">
-                        <div>
-                            <label for="name">Name</label>
-                            <input type="text" name="name" id="">
-                        </div>
-                        <div>
-                            <label for="email">Email</label>
-                            <input type="text" name="email" id="">
-                        </div>
-                        <div>
-                            <label for="message">Message</label>
-                            <textarea name="message" id="" rows="5"></textarea>
-                        </div>
+                    <form hx-get="/mail-form" hx-target="this" hx-swap="outerHTML">
                         <center>
-                            <button type="submit">Send</button>
-                            <p class="fyi">
-                                Your information is only used to reply to your message. <br>
-                                <a href="#">Learn how I handle your data</a>
-                            </p>
+                            <button type="submit">Contact Me</button>
                         </center>
                     </form>
                 </div>
@@ -220,6 +207,9 @@
             <div class="socials">
                 <a href="mailto:john.juni.careers@gmail.com">
                     john.juni.careers@gmail.com  
+                </a>
+                <a href="https://dev.to/john_inuhh_9bd5cfc" target="_blank">
+                    Dev Community
                 </a>
                 <a href="https://www.linkedin.com/in/john-patrick-juni-224aa72a9/" target="_blank">
                     LinkedIn
