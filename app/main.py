@@ -7,7 +7,6 @@ from app.routes.home import router as home_router
 from app.routes.contact import router as contact_router
 from app.routes.data_privacy import router as dp_router
 
-
 app = FastAPI()
 
 # Static File
